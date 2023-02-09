@@ -1,0 +1,16 @@
+{
+  "name": "nourish-personal-cookbook",
+  "version": "1.0.0",
+  "description": "## Date: 2/8/2023",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.9.1"
+  }
+}
