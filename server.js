@@ -1,8 +1,8 @@
 const express = require('express')
+const routes = require('./routes/index')
+const db = require('./db')
 const logger = require('morgan')
 const cors = require('cors')
-const routes = require('./routes')
-const db = require('./db')
 const { Recipe, Comment } = require('./models')
 
 // require() imports and middleware here ^ ///////
