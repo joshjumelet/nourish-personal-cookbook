@@ -11,4 +11,4 @@ const Recipe = new Schema(
   { timestamps: true }
 )
 
-mondule.exports = Recipe
+module.exports = Recipe
