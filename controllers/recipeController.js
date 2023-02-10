@@ -1,4 +1,4 @@
-const { Recipe } = require('../models/index')
+const { Recipe } = require('../models')
 
 const createRecipe = async (req, res) => {
   try {
@@ -21,7 +21,21 @@ const getAllRecipes = async (req, res) => {
   }
 }
 
+const getRecipeById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const recipeId = await Recipe.findById(id)
+    if (recipeId) {
+      return res.status(200).json({ recipeId })
+    }
+    return res.status(404).send('Recipe with the specified ID does not exist.')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createRecipe,
-  getAllRecipes
+  getAllRecipes,
+  getRecipeById
 }
