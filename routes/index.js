@@ -18,12 +18,12 @@ router.put('/recipes/:id', recipeController.updateRecipe)
 router.delete('/recipes/:id', recipeController.deleteRecipe)
 
 /// Comment Routes ///
-router.get('/comments', commentController.createComment)
+router.post('/recipes/:id/comments', commentController.createComment)
 
-router.get('/comments/:id', commentController.getRecipeComments)
+router.get('/recipes/:id/comments', commentController.getRecipeComments)
 
-router.put('/comments/:id', commentController.udpateComment)
+router.put('/recipes/:id/comments/:id', commentController.udpateComment)
 
-router.delete('/comments/:id', commentController.deleteComment)
+router.delete('/recipes/:id/comments/:id', commentController.deleteComment)
 
 module.exports = router

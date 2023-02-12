@@ -6,7 +6,8 @@ const Comment = new Schema(
     name: { type: String, required: true },
     rating: { type: Number, required: true },
     text: { type: String, required: true },
-    image: { type: String, required: false }
+    image: { type: String, required: false },
+    recipe_id: { type: Schema.Types.ObjectId, ref: 'recipe_id' }
   },
   { timestamps: true }
 )

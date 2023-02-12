@@ -1,11 +1,11 @@
-const { Comment } = require('../models')
+const { Comment, Recipe } = require('../models')
 
 const createComment = async (req, res) => {
   try {
-    const newComment = await new Comment(req.body)
-    await newComment.save()
+    const comment = await new Comment(req.body)
+    await comment.save()
     return res.status(201).json({
-      newComment
+      comment
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })
@@ -14,7 +14,7 @@ const createComment = async (req, res) => {
 
 const getRecipeComments = async (req, res) => {
   try {
-    const comments = await Comment.find({ recipe: req.params.id })
+    const comments = await Comment.find({ Recipe: req.params.id })
     return res.status(200).json(comments)
   } catch (error) {
     return res.status(500).send(error.message)
@@ -23,12 +23,10 @@ const getRecipeComments = async (req, res) => {
 
 const udpateComment = async (req, res) => {
   try {
-    const commentUpdate = await Comment.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    )
-    res.status(200).json(commentUpdate)
+    const comment = await Comment.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).json(comment)
   } catch (error) {
     return res.status(500).send(error.message)
   }
