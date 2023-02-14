@@ -4,10 +4,9 @@ import About from './components/About'
 import Recipes from './components/Recipes'
 import Form from './components/Form'
 import { Routes, Route } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 import { useState, useEffect } from 'react'
 import './styles/App.css'
-import { createRecipe } from '../../controllers/recipeController'
 
 function App() {
   const [createRecipe, setCreateRecipe] = useState([])
