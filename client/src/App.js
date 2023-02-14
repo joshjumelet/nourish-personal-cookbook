@@ -9,16 +9,14 @@ import { useState, useEffect } from 'react'
 import './styles/App.css'
 
 function App() {
-  const [createRecipe, setCreateRecipe] = useState([])
   const [recipes, setRecipes] = useState([])
+  const [createRecipe, setCreateRecipe] = useState([])
 
   const getRecipes = async () => {
     try {
       let response = await axios.get('http://localhost:3001/api/recipes')
       setRecipes(response.data)
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   }
 
   useEffect(() => {
