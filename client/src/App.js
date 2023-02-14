@@ -4,12 +4,26 @@ import About from './components/About'
 import Recipes from './components/Recipes'
 import Form from './components/Form'
 import { Routes, Route } from 'react-router-dom'
-// import axios from 'axios'
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 import './styles/App.css'
 
 function App() {
   const [createRecipe, setCreateRecipe] = useState([])
+  const [recipes, setRecipes] = useState([])
+
+  const getRecipes = async () => {
+    try {
+      let response = await axios.get('http://localhost:3001/api/recipes')
+      setRecipes(response.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getRecipes()
+  }, [])
 
   return (
     <div className="App">
@@ -20,16 +34,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/recipes" element={<Recipes />} />
-          <Route
-            path="/recipes/:id/form"
-            element={
-              <Form
-                createRecipe={createRecipe}
-                setCreateRecipe={setCreateRecipe}
-              />
-            }
-          />
+          <Route path="/recipes" element={<Recipes recipes={recipes} />} />
+          <Route path="/recipes/form" element={<Form />} />
         </Routes>
       </main>
     </div>

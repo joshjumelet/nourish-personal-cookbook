@@ -1,7 +1,12 @@
+import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
 
+
 const Form = (props) => {
+
+  // let navigate = useNavigate()
 
   const initialRecipe = {
     title: '',
@@ -13,16 +18,17 @@ const Form = (props) => {
 
 const [createRecipe, setCreateRecipe] = useState(initialRecipe)
 
+const handleSubmit = async (event) => {
+  event.preventDefault()
+  await axios.post('http://localhost:3001/api/recipes', createRecipe)
+  setCreateRecipe(initialRecipe)
+  props.getRecipes()
+}
+
 const handleChange = (event) => {
   setCreateRecipe({ ...createRecipe, [event.target.id]: event.target.value })
 }
 
-const handleSubmit = async (event) => {
-  event.preventDefault()
-  await axios.post('http://localhost:3001/recipes', createRecipe)
-  setCreateRecipe(initialRecipe)
-  props.getRecipes()
-}
 
 return (
   <div className='addRecipe'>
