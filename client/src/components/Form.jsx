@@ -42,6 +42,7 @@ return (
         id='ingredients'
         type='text'
         placeholder='Enter your ingredient list'
+        cols='30' rows='10'
         value={createRecipe.ingredients}
         onChange={handleChange}
       />
@@ -50,6 +51,7 @@ return (
         id='instructions'
         type='text'
         placeholder='Enter your instructions'
+        cols='30' rows='10'
         value={createRecipe.instructions}
         onChange={handleChange}
       />
