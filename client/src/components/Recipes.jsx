@@ -23,17 +23,28 @@ const Recipes = (response) => {
     getRecipes()
   }
 
+  useEffect(() => {
+    getRecipes()
+  }, [])
+
 return (
   <div className="recipe-container">
-    {props.recipes.map((recipe) => (
-      <div className="recipe-card" onClick={() => showRecipes(recipe)} key={recipe.id}>
-        <h2>{recipe.title}</h2>
-        <img src={recipe.image} alt='' />
-        <p>{recipe.ingredients}</p>
-        <p>{recipe.instructions}</p>
-      </div>
-    ))}
-  </div>
+    <h1 className="recipe-title">Recipes</h1>
+    <div>
+      {recipes.map((recipe) => (
+        <div className="recipe-card" key={recipe._id}>
+          <div>
+            <img src={recipe.image} alt='image' />
+          </div>
+          <h2>{recipe.title}</h2>
+          <p>{recipe.ingredients}</p>
+          <p>{recipe.instructions}</p>
+          <button className="delete-recipe" onClickCapture={() => deleteRecipe(recipe._id)}>Delete</button>
+          {/* <UpdateRecipe getRecipes={getRecipes} recipe={recipe} /> */}
+        </div>
+      ))}
+    </div>
+  </div>    
 )
 }
 
