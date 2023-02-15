@@ -33,7 +33,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/recipes" element={<Recipes recipes={recipes} />} />
-          <Route path="/recipes/form" element={<Form />} />
+          <Route
+            path="/recipes/form"
+            element={<Form getRecipes={getRecipes} />}
+          />
         </Routes>
       </main>
     </div>
