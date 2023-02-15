@@ -10,7 +10,7 @@ import './styles/App.css'
 
 function App() {
   const [recipes, setRecipes] = useState([])
-  const [createRecipe, setCreateRecipe] = useState([])
+  // const [createRecipe, setCreateRecipe] = useState([])
 
   const getRecipes = async () => {
     try {

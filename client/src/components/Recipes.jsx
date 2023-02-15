@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
-// import UpdateRecipe from '/UpdateRecipe'
+import UpdateRecipe from './UpdateRecipe'
 
 const Recipes = (response) => {
 
@@ -33,7 +33,7 @@ return (
           <p>{recipe.ingredients}</p>
           <p>{recipe.instructions}</p>
           <button className="delete-recipe" onClickCapture={() => deleteRecipe(recipe._id)}>Delete</button>
-          {/* <UpdateRecipe getRecipes={getRecipes} recipe={recipe} /> */}
+          <UpdateRecipe getRecipes={getRecipes} recipe={recipe} />
         </div>
       ))}
     </div>

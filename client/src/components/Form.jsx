@@ -3,9 +3,9 @@ import { useState } from 'react'
 import axios from 'axios'
 
 
-const Form = (props) => {
+const Form = ({ getRecipes }) => {
 
-  // let navigate = useNavigate()
+  let navigate = useNavigate()
 
   const initialRecipe = {
     title: '',
@@ -21,7 +21,8 @@ const handleSubmit = async (event) => {
   event.preventDefault()
   await axios.post('http://localhost:3001/api/recipes', createRecipe)
   setCreateRecipe(initialRecipe)
-  props.getRecipes()
+  navigate('/recipes')
+  getRecipes()
 }
 
 const handleChange = (event) => {
