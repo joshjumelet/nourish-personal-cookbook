@@ -22,7 +22,7 @@ router.post('/recipes/:id/comments', commentController.createComment)
 
 router.get('/recipes/:id/comments', commentController.getRecipeComments)
 
-router.put('/recipes/:id/comments/:id', commentController.udpateComment)
+router.put('/recipes/:id/comments/:id', commentController.updateComment)
 
 router.delete('/recipes/:id/comments/:id', commentController.deleteComment)
 

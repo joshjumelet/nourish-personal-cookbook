@@ -1,6 +1,6 @@
 const express = require('express')
 const routes = require('./routes/index')
-const db = require('./db')
+const db = require('./db/index')
 const logger = require('morgan')
 const cors = require('cors')
 const { Recipe, Comment } = require('./models')

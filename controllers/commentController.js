@@ -4,6 +4,9 @@ const createComment = async (req, res) => {
   try {
     const comment = await new Comment(req.body)
     await comment.save()
+    const recipeFind = await Recipe.findById(req.params.id)
+    recipeFind.comment.push(comment._id)
+    recipeFind.save()
     return res.status(201).json({
       comment
     })
@@ -21,7 +24,7 @@ const getRecipeComments = async (req, res) => {
   }
 }
 
-const udpateComment = async (req, res) => {
+const updateComment = async (req, res) => {
   try {
     const comment = await Comment.findByIdAndUpdate(req.params.id, req.body, {
       new: true
@@ -48,6 +51,6 @@ const deleteComment = async (req, res) => {
 module.exports = {
   createComment,
   getRecipeComments,
-  udpateComment,
+  updateComment,
   deleteComment
 }
