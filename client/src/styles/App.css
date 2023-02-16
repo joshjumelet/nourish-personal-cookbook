@@ -1,19 +1,78 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.navbar {
+  height: 3em;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Fredoka One', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
+.inactive {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px;
+  padding-right: 10px;
+}
+
+.active {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.inactive:hover {
+  color: rgb(145, 1, 1);
+  
+}
+
+.home-container {
+  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.home {
+  font-family: 'Fredoka One', cursive;
+  font-size: 8rem;
+  color: azure;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 92px rgb(7, 243, 78),
+    0 0 102px rgb(7, 243, 78),
+    0 0 151px rgb(7, 243, 78);
 }
 
+.home1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  align-items: center;
+}
+
+.about-header {
+  text-align: center;
+  color: whitesmoke;
+  font-family: 'Fredoka One', cursive;
+}
+
+.about-text {
+  text-align: center;
+  width: 30rem;
+  color: whitesmoke;
+  font-family: 'Fredoka One', cursive;
+}
+
+.addRecipe {
+  display: flex;
+  flex-direction: column;
+}

@@ -24,7 +24,7 @@ const getAllRecipes = async (req, res) => {
 const getRecipeById = async (req, res) => {
   try {
     const { id } = req.params
-    const recipe = await Recipe.findById(id)
+    const recipe = await Recipe.findById({ comment_id: req.params.id })
     if (recipe) {
       return res.status(200).json({ recipe })
     }

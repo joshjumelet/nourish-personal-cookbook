@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import UpdateRecipe from './UpdateRecipe'
+import Comments from './Comments'
 
 const Recipes = (response) => {
 
   const [recipes, setRecipes] = useState([])
+  // const [comments, setComments] = useState([])
 
   const getRecipes = async () => {
     const response = await axios.get('http://localhost:3001/api/recipes')
@@ -34,6 +36,7 @@ return (
           <p>{recipe.instructions}</p>
           <button className="delete-recipe" onClickCapture={() => deleteRecipe(recipe._id)}>Delete</button>
           <UpdateRecipe getRecipes={getRecipes} recipe={recipe} />
+          <Comments />
         </div>
       ))}
     </div>

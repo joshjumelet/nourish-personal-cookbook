@@ -4,11 +4,11 @@ const Nav = () => {
 
   return (
     <header>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/recipes">Recipes</NavLink>
-        <NavLink to="/recipes/form">New Recipe</NavLink>
+      <nav className='navbar'>
+        <NavLink to="/" className="inactive" activeClassName="active">Home</NavLink>
+        <NavLink to="/about" className="inactive" activeClassName="active">About</NavLink>
+        <NavLink to="/recipes" className="inactive" activeClassName="active">Recipes</NavLink>
+        <NavLink to="/recipes/form" className="inactive" activeClassName="active">New Recipe</NavLink>
       </nav>
     </header>
   )
