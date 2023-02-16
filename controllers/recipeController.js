@@ -14,7 +14,7 @@ const createRecipe = async (req, res) => {
 
 const getAllRecipes = async (req, res) => {
   try {
-    const recipes = await Recipe.find().populate('comments')
+    const recipes = await Recipe.find()
     return res.status(200).json({ recipes })
   } catch (error) {
     return res.status(500).send(error.message)
@@ -24,7 +24,7 @@ const getAllRecipes = async (req, res) => {
 const getRecipeById = async (req, res) => {
   try {
     const { id } = req.params
-    const recipe = await Recipe.findById(id).populate('comments')
+    const recipe = await Recipe.findById(id)
     if (recipe) {
       return res.status(200).json({ recipe })
     }

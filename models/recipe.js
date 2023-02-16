@@ -6,7 +6,7 @@ const Recipe = new Schema(
     ingredients: { type: String, required: true },
     instructions: { type: String, required: true },
     image: { type: String },
-    comment: { type: Schema.Types.ObjectId, ref: 'comment' }
+    comment_id: { type: Schema.Types.ObjectId, ref: 'comment_id' }
   },
   { timestamps: true }
 )
