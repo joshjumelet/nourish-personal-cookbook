@@ -73,6 +73,31 @@
 }
 
 .addRecipe {
+  text-align: center;
+  color: whitesmoke;
+  font-family: 'Fredoka One', cursive;
+}
+
+.recipe-form {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+  width: 100vw;
+  height: 60vh;
+}
+
+.submit {
+  font-family: 'Fredoka One', cursive;
+  margin: 20px;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 2px solid black;
+  transition-duration: 0.4s;
+}
+
+.submit:hover {
+  background-color: rgb(145, 1, 1);
 }

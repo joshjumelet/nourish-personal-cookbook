@@ -34,7 +34,7 @@ return (
   <div className='addRecipe'>
     <h1>Create a Recipe</h1>
     <h4>Enter your info below:</h4>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='recipe-form'>
       <label htmlFor='title'>Recipe Title:</label>
       <input
         id='title'
@@ -69,7 +69,7 @@ return (
         value={createRecipe.image}
         onChange={handleChange}
       />
-      <button type="submit">Submit</button>
+      <button type="submit" className='submit'>Submit</button>
     </form>
   </div>
 )
