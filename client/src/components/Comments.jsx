@@ -1,32 +1,28 @@
-import { useParams } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
+// import { useParams } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 
-const Comments = ({ getRecipes }) => {
+const Comments = ({ getRecipes, recipe }) => {
 
-  let { id } = useParams()
-
-  let navigate = useNavigate()
-
+  // let navigate = useNavigate()
   
   const initialComment = {
     name: '',
     text: '',
     image: '',
-    recipe_id: id
   }
   const [createComment, setCreateComment] = useState(initialComment)
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.post('http://localhost:3001/api/recipes/:id/comments', createComment)
-    setCreateComment(initialComment)
-    navigate(`/recipes`)
+    let response = await axios.post(`http://localhost:3001/api/recipes/${recipe._id}/comments`, createComment)
+    getRecipes()
     }
 
   const handleChange = (event) => {
-    setCreateComment({ ...createComment, [event.target.id]: event.target.value })
+    const {name, value} = event.target
+    setCreateComment((prevState) => ({ ...prevState, [name]: value }))
   }
 
   return (
@@ -35,6 +31,7 @@ const Comments = ({ getRecipes }) => {
       <form onSubmit={handleSubmit}>
         <label htmlFor='name'>Name:</label>
         <input
+          name={'name'}
           id='name'
           type='text'
           placeholder="Enter your name"
@@ -43,6 +40,7 @@ const Comments = ({ getRecipes }) => {
         />
         <label htmlFor='text'>Comment:</label>
         <input
+          name='text'
           id='text'
           type='text'
           placeholder="Enter your comment"
@@ -51,6 +49,7 @@ const Comments = ({ getRecipes }) => {
         />
         <label htmlFor='image'>Image:</label>
         <input
+        name='image'
         id='image'
         type='text'
         placeholder='Enter your image URL here'

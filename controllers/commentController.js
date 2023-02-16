@@ -4,6 +4,9 @@ const createComment = async (req, res) => {
   try {
     const comment = await new Comment(req.body)
     await comment.save()
+    const recipeFind = await Recipe.findById(req.params.id)
+    recipeFind.comment_id.push(comment._id)
+    recipeFind.save()
     return res.status(201).json({
       comment
     })
