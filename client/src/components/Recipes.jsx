@@ -24,9 +24,9 @@ const Recipes = (response) => {
   console.log(response)
   console.log(recipes)
 return (
-  <div className="recipe-container">
+  <div>
     <h1 className="recipe-title">Recipes</h1>
-    <div>
+    <div className="recipe-container">
       {recipes.map((recipe) => (
         <div className="recipe-card" key={recipe._id}>
           <div>

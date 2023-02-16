@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+body {
+  background-image: url('https://img.freepik.com/free-photo/food-with-ingredients_1220-4884.jpg?w=996&t=st=1676515449~exp=1676516049~hmac=e007ab485013cf6c88900913bdf4993da793446f28c189468f617f20ab1c1332');
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
 .navbar {
   height: 3em;
   font-size: 2rem;
@@ -102,7 +108,24 @@
   background-color: rgb(145, 1, 1);
 }
 
+.recipe-title {
+  text-align: center;
+  color: whitesmoke;
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+}
+
 .recipe-container {
   text-align: center;
   color: whitesmoke;
+  font-family: 'Fredoka One', cursive;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.recipe-card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }

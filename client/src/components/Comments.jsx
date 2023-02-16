@@ -1,11 +1,7 @@
-// import { useParams } from "react-router-dom"
-// import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 
 const Comments = ({ getRecipes, recipe }) => {
-
-  // let navigate = useNavigate()
   
   const initialComment = {
     name: '',
@@ -16,7 +12,8 @@ const Comments = ({ getRecipes, recipe }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let response = await axios.post(`http://localhost:3001/api/recipes/${recipe._id}/comments`, createComment)
+    await axios.post(`http://localhost:3001/api/recipes/${recipe._id}/comments`, createComment)
+    setCreateComment(initialComment)
     getRecipes()
     }
 
