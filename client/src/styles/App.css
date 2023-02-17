@@ -181,3 +181,25 @@ body {
 .update-button:hover {
   background-color: green;
 }
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.comment-button {
+  font-family: 'Fredoka One', cursive;
+  margin: 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  width: 10%;
+  border: 2px solid black;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.comment-button:hover {
+  background-color: green;
+}

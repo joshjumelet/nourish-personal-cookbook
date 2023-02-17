@@ -25,7 +25,7 @@ const Comments = ({ getRecipes, recipe }) => {
   return (
     <div className="add-comment">
       <h4>Add Comment</h4>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="comment-form">
         <label htmlFor='name'>Name:</label>
         <input
           name={'name'}
@@ -53,7 +53,7 @@ const Comments = ({ getRecipes, recipe }) => {
         value={createComment.image}
         onChange={handleChange}
       />
-      <button type='submit'>Comment</button>
+      <button type='submit' className="comment-button">Comment</button>
       </form>
     </div>
   )
