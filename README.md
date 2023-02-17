@@ -6,8 +6,7 @@
 
 [LinkedIn](www.linkedin.com/in/joshua-jumelet-155a13251) |
 [GitHub](https://github.com/joshjumelet) |
-[Trello](https://trello.com/b/2NeK496Q/nourish-a-personal-cookbook-project-board) |
-[Heroku](https://www.heroku.com/)
+[Trello](https://trello.com/b/2NeK496Q/nourish-a-personal-cookbook-project-board)
 
 ---
 
@@ -17,16 +16,14 @@
 
 ### _Technologies Used_
 
-- Mongoose
-- Express
-- React
-- Node
+- M.E.R.N (Mongoose | Express | React | Node.js)
+- JavaScript | HTML | CSS
 
 ---
 
 ### _Getting Started_
 
-### Your task is to build a full-stack (Mongoose/Express/React/Node), professional-looking application with a functioning backend and frontend. Your website should allow users to interact with its pages, make requests (buttons, HTML forms, dropdowns, searchbars, etc.) to your backend, and display the data (text, images, etc.) in a meaningful way. Try to think about building an application that will create an engaging user experience.
+### Users interact with the webpage via navigational options displayed in the upper right of the screen. Each link brings a user to a new page. Those selections are a Home, About, Recipes, and Create Recipes. Nourish is designed to allow a user to input their very own recipe and even add their own image of the final product. A user has a field to input the name, ingredients list and instructions for their specific recipe. Once added the user can review, update and even delete any recipe within their library. Users are able to then interact with existing recipes by adding a comment detailing their own experience creating the recipe and any useful information they'd like to see added!
 
 ---
 
@@ -44,15 +41,21 @@
 
 ### _Future Updates_
 
-- [ ] Hidden routes using conditional rendering to mimic the functionality of user authentication
-- [ ] Associate 2 or more of your models
-- [ ] Integrate unit testing
+- [ ] Recipe Details Page that user opens to display a specific recipe.
+- [ ] Search function to allow user to navigate and find a specific recipe.
+- [ ] Integrate a hide function that users interact with to update or comment on a recipe when selected.
 - [ ] Integrate a 3rd party API
 
 ---
 
 ### Credits
 
+##### GitHub: [GitHub](https://github.com/joshjumelet)
+
+##### MongoDB Cloud: [Atlas](https://cloud.mongodb.com)
+
+##### React: [React Docs](https://beta.reactjs.org/)
+
 ##### Images: [DuckDuckGo Search](https://duckduckgo.com/?t=hc&va=b)
 
-##### Markdown Cheatsheet: [GitHub](https://github.com/joshjumelet/u1_hw_markdown)
+##### CSS: [CSSreference.io](https://cssreference.io)
