@@ -5,8 +5,10 @@
 ### By: Joshua Jumelet
 
 [LinkedIn](www.linkedin.com/in/joshua-jumelet-155a13251) |
-[GitHub](https://github.com/joshjumelet) |
-[Trello](https://trello.com/b/2NeK496Q/nourish-a-personal-cookbook-project-board)
+[GitHub](https://github.com/joshjumelet/nourish-personal-cookbook) |
+[Trello](https://trello.com/b/2NeK496Q/nourish-a-personal-cookbook-project-board) |
+[ERD](https://app.diagrams.net/#G1Lr6SuTMNCOb6UTsEaonZRQsipK--Y26M) |
+[Component Hierarchy Diagram](https://app.diagrams.net/#G1tMuf3SJuZPwunhQE85kCiP6XIOZIWPRQ)
 
 ---
 
