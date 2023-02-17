@@ -102,6 +102,7 @@ body {
   border-radius: 8px;
   border: 2px solid black;
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .submit:hover {
@@ -113,19 +114,70 @@ body {
   color: whitesmoke;
   font-family: 'Fredoka One', cursive;
   font-size: 3rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .recipe-container {
   text-align: center;
   color: whitesmoke;
   font-family: 'Fredoka One', cursive;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .recipe-card {
   width: 50%;
   display: flex;
   flex-direction: column;
+  align-content: center;
+}
+
+.recipe-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 24px;
+  border: 10px solid black;
+}
+
+.delete-recipe {
+  align-self: center;
+  font-family: 'Fredoka One', cursive;
+  margin: 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  width: 10%;
+  border: 2px solid black;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.delete-recipe:hover {
+  background-color: rgb(145, 1, 1);
+}
+
+.update-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.update-button {
+  font-family: 'Fredoka One', cursive;
+  margin: 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  width: 10%;
+  border: 2px solid black;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background-color: green;
 }

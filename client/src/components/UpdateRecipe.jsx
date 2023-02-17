@@ -22,8 +22,9 @@ const UpdateRecipe = ({ recipe, getRecipes }) => {
 
   return (
     <div className='update-recipe'>
-      <h6>Update Recipe</h6>
-      <form onSubmit={handleUpdateRecipe}>
+      <h4>Update Recipe</h4>
+      <form onSubmit={handleUpdateRecipe} className='update-form'>
+        <label htmlFor='title'>Title:</label>
         <input
           name='title'
           id='title'
@@ -32,7 +33,8 @@ const UpdateRecipe = ({ recipe, getRecipes }) => {
           value={recipeUpdate.title}
           onChange={handleChange}
         />
-        <input
+        <label htmlFor='ingredients'>Ingredients:</label>
+        <textarea
           name='ingredients'
           id='ingredients'
           type='text'
@@ -40,7 +42,8 @@ const UpdateRecipe = ({ recipe, getRecipes }) => {
           value={recipeUpdate.ingredients}
           onChange={handleChange}
         />
-        <input
+        <label htmlFor='instructions'>Instructions:</label>
+        <textarea
           name='instructions'
           id='instructions'
           type='text'
@@ -48,6 +51,7 @@ const UpdateRecipe = ({ recipe, getRecipes }) => {
           value={recipeUpdate.instructions}
           onChange={handleChange}
         />
+        <label htmlFor='instructions'>Image:</label>
         <input
           name='image'
           id='image'
@@ -56,7 +60,7 @@ const UpdateRecipe = ({ recipe, getRecipes }) => {
           value={recipeUpdate.image}
           onChange={handleChange}
         />
-        <button type="update">Update</button>
+        <button type="update" className='update-button'>Update</button>
       </form>
     </div>
   )

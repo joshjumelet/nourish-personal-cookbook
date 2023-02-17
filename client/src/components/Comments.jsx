@@ -23,7 +23,7 @@ const Comments = ({ getRecipes, recipe }) => {
   }
 
   return (
-    <div className="addComment">
+    <div className="add-comment">
       <h4>Add Comment</h4>
       <form onSubmit={handleSubmit}>
         <label htmlFor='name'>Name:</label>

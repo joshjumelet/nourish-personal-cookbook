@@ -30,12 +30,12 @@ return (
       {recipes.map((recipe) => (
         <div className="recipe-card" key={recipe._id}>
           <div>
-            <img src={recipe.image} alt='' />
+            <img src={recipe.image} alt='' className="recipe-image" />
           </div>
           <h2>{recipe.title}</h2>
           <p>{recipe.ingredients}</p>
           <p>{recipe.instructions}</p>
-          <button className="delete-recipe" onClickCapture={() => deleteRecipe(recipe._id)}>Delete</button>
+          <button className="delete-recipe" onClickCapture={() => deleteRecipe(recipe._id)}>Delete Recipe</button>
           <UpdateRecipe getRecipes={getRecipes} recipe={recipe} />
           <div>
             {recipe.comment_id.map((comment) => (
