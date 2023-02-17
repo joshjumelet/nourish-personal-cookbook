@@ -6,7 +6,6 @@ import Comments from './Comments'
 const Recipes = (response) => {
   
   const [recipes, setRecipes] = useState([])
-  // const [comments, setComments] = useState([])
 
   const getRecipes = async () => {
     const response = await axios.get('http://localhost:3001/api/recipes')
@@ -21,8 +20,7 @@ const Recipes = (response) => {
   useEffect(() => {
     getRecipes()
   }, [])
-  console.log(response)
-  console.log(recipes)
+
 return (
   <div>
     <h1 className="recipe-title">Recipes</h1>
@@ -37,16 +35,16 @@ return (
           <p>{recipe.instructions}</p>
           <button className="delete-recipe" onClickCapture={() => deleteRecipe(recipe._id)}>Delete Recipe</button>
           <UpdateRecipe getRecipes={getRecipes} recipe={recipe} />
+          <Comments getRecipes={getRecipes} recipe={recipe}/>
           <div>
             {recipe.comment_id.map((comment) => (
-              <div key={comment._id}>
-                <h3>Name: { comment.name }</h3>
+              <div key={comment._id} className="comment">
+                <h4>Name: { comment.name }</h4>
                 <p>Comment: {comment.text }</p>
                 <img src={ comment.image } alt='' />
               </div>
             ))}
           </div>
-          <Comments getRecipes={getRecipes} recipe={recipe}/>
         </div>
       ))}
     </div>

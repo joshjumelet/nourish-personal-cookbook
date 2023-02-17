@@ -37,6 +37,20 @@
 
 ![Image](Images/NourishERD.jpg)
 
+### _Final Screenshots_
+
+##### Nourish Home Page
+
+![Image](Images/NourishHome.jpeg)
+
+##### Nourish New Recipe Page
+
+![Image](Images/NourishForm.jpeg)
+
+##### Nourish Recipe Page
+
+![Image](Images/NourishRecipe.jpeg)
+
 ---
 
 ### _Future Updates_

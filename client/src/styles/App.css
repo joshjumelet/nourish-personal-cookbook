@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 body {
-  background-image: url('https://img.freepik.com/free-photo/food-with-ingredients_1220-4884.jpg?w=996&t=st=1676515449~exp=1676516049~hmac=e007ab485013cf6c88900913bdf4993da793446f28c189468f617f20ab1c1332');
+  background-image: url('https://th.bing.com/th/id/R.b63cbf8f3a74cf54896187e942384990?rik=voUCi0GHAMKt8A&riu=http%3a%2f%2fwww.juliosmexicanfood.com%2fwp-content%2fuploads%2f2017%2f09%2fjmf-main-slider-2-Large.jpg&ehk=bCEgXQPcTUwz6%2bYqnVj9qKt8hurh5%2fAUvd1ElwUOGck%3d&risl=&pid=ImgRaw&r=0');
   background-size: 100%;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .navbar {
@@ -13,6 +14,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   font-family: 'Fredoka One', cursive;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .inactive {
@@ -47,8 +49,9 @@ body {
   text-shadow:
     0 0 10px #fff,
     0 0 21px #fff,
-    0 0 92px rgb(7, 243, 78),
-    0 0 102px rgb(7, 243, 78),
+    0 0 92px rgb(0, 122, 12),
+    0 0 102px rgb(0, 122, 12),
+    0 0 130px rgb(7, 243, 78),
     0 0 151px rgb(7, 243, 78);
 }
 
@@ -56,6 +59,7 @@ body {
   font-family: 'Fredoka One', cursive;
   font-size: 2rem;
   color: whitesmoke;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .about-container {
@@ -69,6 +73,7 @@ body {
   text-align: center;
   color: whitesmoke;
   font-family: 'Fredoka One', cursive;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .about-text {
@@ -76,12 +81,14 @@ body {
   width: 30rem;
   color: whitesmoke;
   font-family: 'Fredoka One', cursive;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .addRecipe {
   text-align: center;
   color: whitesmoke;
   font-family: 'Fredoka One', cursive;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .recipe-form {
@@ -126,7 +133,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
+  margin: 15px;
 }
 
 .recipe-card {
@@ -137,10 +144,10 @@ body {
 }
 
 .recipe-image {
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   border-radius: 24px;
-  border: 10px solid black;
+  border: 3px solid black;
 }
 
 .delete-recipe {

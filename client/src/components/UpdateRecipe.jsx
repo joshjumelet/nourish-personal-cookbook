@@ -22,7 +22,7 @@ const UpdateRecipe = ({ recipe, getRecipes }) => {
 
   return (
     <div className='update-recipe'>
-      <h4>Update Recipe</h4>
+      <h3>Update Recipe</h3>
       <form onSubmit={handleUpdateRecipe} className='update-form'>
         <label htmlFor='title'>Title:</label>
         <input

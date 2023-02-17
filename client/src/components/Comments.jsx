@@ -24,11 +24,11 @@ const Comments = ({ getRecipes, recipe }) => {
 
   return (
     <div className="add-comment">
-      <h4>Add Comment</h4>
+      <h3>Add Comment</h3>
       <form onSubmit={handleSubmit} className="comment-form">
         <label htmlFor='name'>Name:</label>
         <input
-          name={'name'}
+          name='name'
           id='name'
           type='text'
           placeholder="Enter your name"
